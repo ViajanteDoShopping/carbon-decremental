@@ -3,6 +3,7 @@ import { Jersey_20 } from "next/font/google";
 import "./globals.css";
 
 import { Header } from "@/components/layout/Header"
+import { Footer } from "@/components/layout/Footer"
 
 const jersey20 = Jersey_20({
   weight: "400",
@@ -40,7 +41,12 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
 
         <Header />
-        {children}
+
+        <div className="flex-1">
+          {children}
+        </div>
+        
+        <Footer />
 
       </body>
 
